@@ -11,6 +11,8 @@ var DISABLE_FINISH = false;
 var STAR_STEP_FACTOR = 3; // minMoves * this for less stars
 var FINISH_FILL_COLOR = "#4E7AC7"; // Fill the solution path with this color
 
+var moveCounts = 0;
+
 var Game = function () {
   function Game(svgGameElem) {
     _classCallCheck(this, Game);
@@ -74,6 +76,12 @@ var Game = function () {
   }, {
     key: "reloadLevel",
     value: function reloadLevel() {
+      console.log("======================");
+      console.log(this.levelNumber);
+      console.log(moveCounts);
+      console.log("======================");
+      this.levelNumber = 0;
+      moveCounts = 0;
       this.loadLevelData();
     }
 
@@ -509,6 +517,7 @@ var Game = function () {
           this.dragFromY = y;
           this.lastDir = dir;
           this.dragCount++;
+          moveCounts++;
 
           this.updateStatus();
 

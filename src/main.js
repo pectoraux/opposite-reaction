@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     nextLevelElem.classList.add("bounce-right");
     game.nextLevel();
   });
-
   gotoNextLevelElem.addEventListener("click", function(e) {
     e.preventDefault();
     nextLevelElem.click();

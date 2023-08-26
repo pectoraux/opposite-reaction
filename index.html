@@ -34,15 +34,19 @@
     <span id="level-title">Level Title</span>
     <img id="menu" alt="Show About" src="img/menu.svg">
   </div>
-
+  <form action="">
+    <label for="tokenId">Token ID: </label>
+    <input type="text" id="tokenId" name="tokenId">
+    <input type="submit" value="save" ><br><br>
+  </form>
   <svg id="game"></svg>
 
   <div id="status">moves X</div>
 
-  <div id="footer">
+  <div id="footer" style="margin-left: 130px;">
     <img id="prev-level" alt="Previous Level" class="nav-icon" src="img/left-arrow.svg">
     <img id="reload-level" alt="Reload Level" class="nav-icon" src="img/refresh.svg">
-    <img id="next-level" alt="Next Level" class="nav-icon" src="img/right-arrow.svg">
+    <img id="next-level" alt="Next Level" style="display: none;" class="nav-icon" src="img/right-arrow.svg">
   </div>
 
   <div id="level-finish-dialog" class="dialog">
@@ -77,17 +81,7 @@
       Opposite Reaction
     </h3>
     <p>
-      Programming, design and game concept by <a href="https://www.linkedin.com/in/sveinn-steinarsson/">Sveinn Steinarsson</a>
-    </p>
-    <p>
-      Opposite Reaction is licensed under the <a href="https://github.com/sveinn-steinarsson/opposite-reaction/blob/master/LICENSE">MIT license</a>
-      and hosted on <a href="https://github.com/sveinn-steinarsson/opposite-reaction">GitHub</a>
-    </p>
-    <h4>
-      Settings
-    </h4>
-    <p>
-      Animation effect: <a id="animation-effect" href="#">instant</a>
+      <a id="animation-effect" style="display: none;" href="#"></a>
     </p>
     <p>
       <a id="how-to-play" href="#">How to play</a>
